@@ -11,3 +11,18 @@ export const deepClone = obj => {
 };
 
 export const isEmpty = val => val == null || !(Object.keys(val) || val).length;
+
+export const findMember = (tree = [], selector) => {
+  if (!selector) return tree[0];
+
+  const members = selector.split('.');
+  let currentNode = { children: tree };
+  members.forEach(name => {
+    currentNode = (currentNode.children || []).find(ele => ele.name === name);
+  });
+  return currentNode;
+};
+
+export const pickRandom = list => {
+  return list[Math.floor(Math.random() * list.length)];
+};
