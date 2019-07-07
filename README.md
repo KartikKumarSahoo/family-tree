@@ -15,6 +15,12 @@ Part Three:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## What's Next?
+There are many improvements we can do on top of this such as:
+- Get the inputs (Name, Fav Color, Gender, City and others) from the user when a new member is to be added. We can open a dialog to ask for all the fields, validate the fields and then add the member.
+- Styling can also be improved. On hover over the member we can show the action buttons instead of showing them always.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
