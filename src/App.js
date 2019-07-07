@@ -1,33 +1,9 @@
 import React from 'react';
 import Tree from 'react-d3-tree';
 import './App.css';
-// import { NAME, AGE, TEXT, MALE, FEMALE } from './constants';
 import { deepClone, findMember } from './utils';
 import MemberNode from './MemberNode';
 import initialFamilyTree from './familyTreeMock';
-
-// const fields = {
-//   name: {
-//     label: 'Name',
-//     type: 'text',
-//     validation: value => NAME.test(value),
-//   },
-//   age: {
-//     label: 'Age',
-//     type: 'number',
-//     validation: value => AGE.test(value),
-//   },
-//   gender: {
-//     label: 'Gender',
-//     type: 'select',
-//     validation: value => [MALE, FEMALE].includes(value),
-//   },
-//   color: {
-//     label: 'Fav Color',
-//     type: 'text',
-//     validation: value => TEXT.test(value),
-//   },
-// };
 
 class App extends React.Component {
   constructor() {
@@ -49,18 +25,11 @@ class App extends React.Component {
     });
   }
 
-  // TODO: See if this is needed.
-  onNodeClick = (node, e) => {
-    console.log(node);
-    console.log(e);
-  };
-
   addChild = (parent, child) => {
     const nextData = deepClone(this.state.data);
     const targetMember = findMember(nextData, parent.key);
     targetMember.children = [...(targetMember.children || []), child];
 
-    // console.log('after adding a child', nextData);
     this.setState({
       data: nextData,
     });
@@ -73,7 +42,6 @@ class App extends React.Component {
       member => member.key !== child.key,
     );
 
-    // console.log('after removing a child', nextData);
     this.setState({
       data: nextData,
     });
@@ -94,9 +62,9 @@ class App extends React.Component {
             data={data}
             translate={position}
             orientation={'vertical'}
-            onClick={this.onNodeClick}
             nodeSize={{ x: 150, y: 170 }}
             allowForeignObjects
+            circleRadius={16}
             nodeLabelComponent={{
               render: (
                 <MemberNode
@@ -118,6 +86,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-// Add child with dialog
-// Styling fix

@@ -10,8 +10,6 @@ export const deepClone = obj => {
   return res;
 };
 
-export const isEmpty = val => val == null || !(Object.keys(val) || val).length;
-
 export const findMember = (tree = [], selector) => {
   if (!selector) return tree[0];
 

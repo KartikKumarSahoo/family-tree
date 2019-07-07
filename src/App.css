@@ -10,6 +10,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 10px;
 }
 
 .leafNodeBase {
@@ -35,6 +36,8 @@
 .node-wrapper button {
   background: transparent;
   border: 1px solid rgb(124, 123, 123);
+  height: 22px;
+  width: 22px;
   border-radius: 50%;
   margin-left: 5px;
   cursor: pointer;

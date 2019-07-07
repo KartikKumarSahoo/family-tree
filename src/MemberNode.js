@@ -57,7 +57,7 @@ class MemberNode extends React.PureComponent {
           })}
         </div>
 
-        <button onClick={this.onAddChild} title="Add Child">
+        <button onClick={this.onAddChild} title="Add Member">
           +
         </button>
         {!children && (

@@ -57,3 +57,26 @@ export const NAME_LIST = [
   'Rasmita',
   'Reshma',
 ];
+
+export const fields = {
+  name: {
+    label: 'Name',
+    type: 'text',
+    validation: value => NAME.test(value),
+  },
+  age: {
+    label: 'Age',
+    type: 'number',
+    validation: value => AGE.test(value),
+  },
+  gender: {
+    label: 'Gender',
+    type: 'select',
+    validation: value => [MALE, FEMALE].includes(value),
+  },
+  color: {
+    label: 'Fav Color',
+    type: 'text',
+    validation: value => TEXT.test(value),
+  },
+};
