@@ -1,3 +1,18 @@
+## Overview
+This shows visualization of a single parent family tree in the browser.
+
+Part One:
+Design a data structure to store a single parent family tree.
+- each family member can have zero or more children.
+- each family member can have an indefinite number of properties, e.g. name, gender, favorite color, etc.
+- there should not be a limit on the depth of the family tree.
+
+Part Two: 
+- Render the family tree in the browser.
+
+Part Three:
+- Implement UI to add and remove members of the tree 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
